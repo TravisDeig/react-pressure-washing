@@ -1,38 +1,151 @@
-.App {
+.navbar-dark {
+  background-color: rgba(3, 84, 128, 0.95);
+}
+
+.divider_1 {
+  /* background-image: url("img/transition1"); */
+  background-size: 100% 159px;
+  background-repeat: no-repeat;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 159px;
+}
+
+#sectionOne {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-position: top;
+}
+
+.mainHeader {
+  background-color: rgba(253, 253, 255, 0.74);
+}
+
+.mainHead {
+  color: rgb(96, 177, 244);
+  text-shadow: 2px 2px 8px black;
+  font-style: italic;
+}
+
+#top_bg_container {
+  /* background-image: url("/img/testHeaderBG.png"); */
+  background-repeat: no-repeat;
+  background-attachment: fixed, top;  
+  background-size: cover;
+  background-clip: border-box;
+
+}
+
+h2, h3, h4 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+hr, .rounded {
+  border-top: 5px solid orange;
+  border-radius: 5px;
+  max-width: 15%;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+hr, .roundedVertical {
+  border-left: 2px solid rgba(14, 13, 13, 100%);
+  border-radius: 5px;
+  max-height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.mainCard {
+  align-content: center;
+}
+
+.headHelp {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.tester {
+  position: relative;
+  animation-name: example;
+  animation-duration: 2s;
+}
+
+@keyframes example {
+  from {left: 2000px;}
+  to {left: 0px;}
+}
+
+.tester2 {
+  position: relative;
+  animation-name: example2;
+  animation-duration: 2s;
+}
+
+@keyframes example2 {
+  from {top: 600px;}
+  to {top: 0px;}
+}
+
+.dark {
+  /* background-color: #4353a3; */
+  background-image: linear-gradient(#3f80d4ff,rgb(136, 169, 212), rgb(68, 129, 209), #3f80d4ff, #3f80d4ff, #3f80d4ff);
+}
+
+footer {
+  background-image: linear-gradient(#3f80d4ff,#588cdb, #b4d2ee);
+
+}
+
+.dividerHelp {
+  margin-bottom: -1px;
+  margin-top: -1px;
+  background-position: relative;
+  background-size: cover;
+  position: relative;
+  vertical-align: baseline;
+  padding: 0;
+}
+
+.lightContainer {
+  background-color: white;
+}
+
+.darkCard {
+  background-color: rgb(201, 199, 199);
+  border-color: rgb(165, 165, 165);
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#jobInfoForm {
+  background-image: linear-gradient(to bottom right, #009aff93, rgb(185, 214, 247));
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-toggler-icon {
+  color: rgba(0, 0, 0, 0.19);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navText {
+  font-weight: bolder;
+  color: #009aff93;
+}
+
+#toTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
 }
