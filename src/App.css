@@ -149,3 +149,7 @@ footer {
   padding: 15px;
   border-radius: 4px;
 }
+
+.footerHeadText {
+  color: yellow;
+}
