@@ -30,7 +30,7 @@
 }
 
 #top_bg_container {
-  /* background-image: url("/img/testHeaderBG.png"); */
+  /* background-image: url(./images/testHeaderBG.png); */
   background-repeat: no-repeat;
   background-attachment: fixed, top;  
   background-size: cover;

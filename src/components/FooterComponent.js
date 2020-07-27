@@ -20,16 +20,20 @@ function Footer() {
                     <Col>
                         <h5 className="mainHead footerHeadText">Contact Us</h5>
                         <ul className="list-unstyled">
-                            <li className="text-light">Pressure Washing<br/>4444 MadeUp Lane S<br/>Jacksonville, FL 32250
+                            <li className="text-light">Pressure Washing<br />4444 MadeUp Lane S<br />Jacksonville, FL 32250
                             </li>
-                    <li className="my-1"><a role="button" className="btn btn-link text-light" href="tel:+12345678900"><i
-                        className="fa fa-phone text-light"></i>1-234-567-8900</a></li>
-                    <li><a role="button" class="btn btn-link text-light" href="mailto:email@example.com"><i
-                        className="fa fa-envelope-o text-light"></i> email@example.com</a></li>
+                            <li className="my-3">
+                                <a role="button" className="btn btn-link text-light" href="tel:+12345678900"><i
+                                className="fa fa-phone text-light"></i>1-234-567-8900</a>
+                            </li>
+                            <li>
+                                <a role="button" className="btn btn-link text-light" href="mailto:email@example.com"><i
+                                className="fa fa-envelope-o text-light"></i> email@example.com</a>
+                            </li>
                         </ul>
                     </Col>
                     <Col>
-                    <h5 className="mainHead footerHeadText">Proudly Serving</h5>
+                        <h5 className="mainHead footerHeadText">Proudly Serving</h5>
                         <ul className="list-unstyled">
                             <li className="text-light">Jacksonville, FL</li>
                             <li className="text-light">Ponte Vedra, FL</li>

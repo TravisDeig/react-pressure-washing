@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand, Container, Nav, Col, Row } from 'react-bootstrap';
+import testHeaderBG from '../images/testHeaderBG.png'
+
 
 
 class Header extends Component {
@@ -13,7 +15,7 @@ class Header extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{ backgroundImage:`url(${testHeaderBG})`}}>
                 <Container fluid className="navbar-dark sticky-top">
                     <Row>
                         <Col>
@@ -65,6 +67,21 @@ class Header extends Component {
                         </Container>
                     </Navbar>
                 </header>
+
+                <Container className="headHelp">
+                    <Row>
+                        <Col>
+                            <h2 className="text-light">Residential & Commercial Cleaning</h2>
+                        </Col>
+                    </Row>
+                    <hr className="rounded" />
+                    <Row>
+                        <Col>
+                            <h3 className="text-light">Veteran-led, quality pressure washing servicing the Greater
+                            Jacksonville, FL area.</h3>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         );
     }
