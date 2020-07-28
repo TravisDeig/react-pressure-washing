@@ -4,7 +4,7 @@ import Footer from './FooterComponent'
 import Sidebar from './SideBar'
 import { SERVICES } from '../shared/services'
 import { Route, Switch } from "react-router-dom";
-import { Header } from './Header';
+import Header from './Header';
 
 class Main extends Component {
     constructor(props) {
