@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import NavItem from './NavItemComponent';
 
 const StyledSideNav = styled.div`
   position: fixed;
@@ -17,17 +18,57 @@ const StyledSideNav = styled.div`
 
 
 class SideNav extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            activePath: '/',
+            items: [
+                {
+                    path: '/home',
+                    name: 'Home',
+                    css: 'fa fa-fw fa-home',
+                    key: 1 
+                },
+                // {
+                //     path: '/about',
+                //     name: 'About',
+                //     css: 'fa fa-fw fa-clock',
+                //     key: 2
+                // },
+                // {
+                //     path: '',
+                //     name: '',
+                //     css: '',
+                //     key: 3
+                // },
+            ]
+        }
+    }
+
+    onItemClick = (path) => {
+        this.setState({ activePath: path }); 
+    }
+
     render() {
+        const { items, activePath } = this.state;
         return (
-        <StyledSideNav></StyledSideNav>
+            <StyledSideNav>
+                {
+                    items.map((item) => {
+                        return (
+                            <NavItem path={item.path} name={item.name} css={item.css} onItemClick={this.onItemClick} active={item.path === activePath} key={item.key} />
+                        )
+                    })
+                }
+            </StyledSideNav>
         );
-      }
+    }
 }
 
 export default class Sidebar extends React.Component {
-  render() {
-    return (
-        <SideNav></SideNav>
-    );
-  }
+    render() {
+        return (
+            <SideNav></SideNav>
+        );
+    }
 }

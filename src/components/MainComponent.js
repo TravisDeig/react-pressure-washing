@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Home2 from './HomeComponent2';
+import Home from './HomeComponent';
 import Footer from './FooterComponent'
 import Sidebar from './SideBar'
 import { SERVICES } from '../shared/services'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { Header } from './Header';
 
 class Main extends Component {
@@ -16,12 +16,12 @@ class Main extends Component {
     render() {
         return (
             <React.Fragment>
-                <Router>
-                    <Header />
-                    <Sidebar />
-                    <Home2 services={this.state.services} />
-                    <Footer />
-                </Router>
+                <Header />
+                <Sidebar />
+                <Switch>
+                    <Route path='/home' render={() => <Home services={this.state.services} />}/>
+                </Switch>
+                <Footer />
             </React.Fragment>
         );
     }
