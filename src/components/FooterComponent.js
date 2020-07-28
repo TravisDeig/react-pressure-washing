@@ -3,7 +3,7 @@ import { Container, Row, Col, Nav } from 'react-bootstrap';
 
 function Footer() {
     return (
-        <footer className="site-footer">
+        <footer className="site-footer footerWrapper">
             <Container>
                 <Row>
                     <Col>

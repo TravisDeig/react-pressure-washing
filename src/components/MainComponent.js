@@ -1,23 +1,28 @@
 import React, { Component } from 'react';
-import Header from './HeaderComponent';
-import Home from './HomeComponent';
+import Home2 from './HomeComponent2';
 import Footer from './FooterComponent'
+import Sidebar from './SideBar'
 import { SERVICES } from '../shared/services'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Header } from './Header';
 
 class Main extends Component {
     constructor(props) {
         super(props);
-        this.state={
+        this.state = {
             services: SERVICES
-            }
+        }
     }
     render() {
         return (
-            <div>
-                <Header />
-                <Home services={this.state.services}/>
-                <Footer />
-            </div>
+            <React.Fragment>
+                <Router>
+                    <Header />
+                    <Sidebar />
+                    <Home2 services={this.state.services} />
+                    <Footer />
+                </Router>
+            </React.Fragment>
         );
     }
 }

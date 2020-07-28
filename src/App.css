@@ -153,3 +153,16 @@ footer {
 .footerHeadText {
   color: yellow;
 }
+
+.gridWrapper {
+  margin-top: 3.39em;
+  margin-left: 9em;
+}
+
+.footerWrapper {
+  margin-left: 9em;
+}
+
+.right {
+  float: right;
+}
