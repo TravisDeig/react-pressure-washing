@@ -93,7 +93,7 @@ hr, .roundedVertical {
 }
 
 footer {
-  background-image: linear-gradient(#3f80d4ff,#588cdb, #b4d2ee);
+  background-image: linear-gradient(#3f80d4ff,#588cdb, #588cdb, #b4d2ee, white);
 
 }
 
@@ -156,11 +156,11 @@ footer {
 
 .gridWrapper {
   margin-top: 3.39em;
-  margin-left: 9em;
+  margin-left: 4.6em;
 }
 
 .footerWrapper {
-  margin-left: 9em;
+  margin-left: 4.6em;
 }
 
 .right {

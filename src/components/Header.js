@@ -8,7 +8,7 @@ const StyledHeaderNav = styled.div`
     width: 100%;
     z-index: 1;
     top: 0em;
-    background-color: rgb(240, 240, 240); 
+    background-color: rgb(250, 250, 250); 
     overflow-y: hidden;
     box-shadow: 3px 3px 3px grey;
 `;
@@ -23,11 +23,6 @@ class Header extends React.Component {
         this.toggleModal = this.toggleModal.bind(this);
         this.handleLogin = this.handleLogin.bind(this);
     }
-
-    // [show, setShow] = useState(false);
-
-    // handleClose = () => setShow(false);
-    // handleShow = () => setShow(true);
 
     toggleModal() {
         this.setState({
@@ -46,20 +41,20 @@ class Header extends React.Component {
     render() {
         return (
             <>
-            <StyledHeaderNav>
-                <Navbar expand="lg">
-                    <Navbar.Brand href="/"><img height="40" width="118" src="asset/images/logoFull.svg" /></Navbar.Brand>
-                    <Col>
-                        <Button onClick={this.toggleModal} className="right" variant="light" md={{ span: 4, offset: 4 }}>
-                            <i className="fa fa-sign-in fa-lg" /> Login
-            </Button>
-                    </Col>
-                </Navbar>
+                <StyledHeaderNav>
+                    <Navbar expand="lg">
+                        <Navbar.Brand href="/"><img height="40" width="118" src="asset/images/logoFull.svg" /></Navbar.Brand>
+                        <Col>
+                            <Button onClick={this.toggleModal} className="right" variant="light">
+                                <i className="fa fa-sign-in fa-lg" /> Login
+                            </Button>
+                        </Col>
+                    </Navbar>
 
-            </StyledHeaderNav>
-            <Modal show={this.state.isModalOpen} onHide={this.toggleModal} animation={false}>
+                </StyledHeaderNav>
+                <Modal show={this.state.isModalOpen} onHide={this.toggleModal} animation={false}>
                     <Modal.Header closeButton>
-                    <Modal.Title>Login</Modal.Title>
+                        <Modal.Title>Login</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <Form onSubmit={this.handleLogin}>
@@ -72,7 +67,7 @@ class Header extends React.Component {
                                 <Form.Control type="password" id="password" name="password" innerRef={input => this.password = input} />
                             </Form.Group>
                             <Form.Group check>
-                                    <Form.Check type="checkbox" name="remember" innerRef={input => this.remember = input} label="Remember me" />
+                                <Form.Check type="checkbox" name="remember" innerRef={input => this.remember = input} label="Remember me" />
                             </Form.Group>
                             <Button type="submit" value="submit" color="primary">Login</Button>
                         </Form>

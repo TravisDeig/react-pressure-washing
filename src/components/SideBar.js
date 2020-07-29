@@ -5,14 +5,14 @@ import NavItem from './NavItemComponent';
 const StyledSideNav = styled.div`
   position: fixed;
   height: 100%;
-  width: 150px;
+  width: 75px;
   z-index: 1;
   top: 3.4em;
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(250, 250, 250);
   overflow-x: hidden;
   padding-top: 10px;
   border-width: medium;
-  box-shadow: 5px 5px 6px grey;
+  box-shadow: 3px 5px 6px grey;
 `;
 
 
@@ -29,12 +29,12 @@ class SideNav extends React.Component {
                     css: 'fa fa-fw fa-home',
                     key: 1 
                 },
-                // {
-                //     path: '/about',
-                //     name: 'About',
-                //     css: 'fa fa-fw fa-clock',
-                //     key: 2
-                // },
+                {
+                    path: '/calendar',
+                    name: 'Calendar',
+                    css: 'fa fa-fw fa-calendar',
+                    key: 2
+                },
                 // {
                 //     path: '',
                 //     name: '',
@@ -56,7 +56,7 @@ class SideNav extends React.Component {
                 {
                     items.map((item) => {
                         return (
-                            <NavItem path={item.path} name={item.name} css={item.css} onItemClick={this.onItemClick} active={item.path === activePath} key={item.key} />
+                            <NavItem path={item.path} css={item.css} onItemClick={this.onItemClick} active={item.path === activePath} key={item.key} />
                         )
                     })
                 }

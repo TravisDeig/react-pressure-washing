@@ -5,6 +5,7 @@ import Sidebar from './SideBar'
 import { SERVICES } from '../shared/services'
 import { Route, Switch } from "react-router-dom";
 import Header from './Header';
+import Calendar from './CalendarComponent'
 
 class Main extends Component {
     constructor(props) {
@@ -20,6 +21,7 @@ class Main extends Component {
                 <Sidebar />
                 <Switch>
                     <Route path='/home' render={() => <Home services={this.state.services} />}/>
+                    <Route exact path='/calendar' component={Calendar} />
                 </Switch>
                 <Footer />
             </React.Fragment>

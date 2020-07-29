@@ -11,7 +11,7 @@ text-align: center;
 margin-bottom: 0; 
 a {
   font-size: 2.05em;
-  color: ${(props) => props.active ? "white" : "blue"};
+  color: ${(props) => props.active ? "#b4d2ee" : "#588cdb"};
   :hover {
     opacity: 0.7;
     text-decoration: none;
@@ -19,10 +19,7 @@ a {
 }
 `;
 
-const NavIcon = styled.div`
-  color: blue;
-  font-size:;
-`;
+
 
 
 class NavItem extends React.Component {
