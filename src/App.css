@@ -29,6 +29,12 @@
   font-style: italic;
 }
 
+.reactHead {
+  color: rgb(96, 177, 244);
+  text-shadow: 1px 1px 1px black;
+  font-style: italic;
+}
+
 #top_bg_container {
   /* background-image: url(./images/testHeaderBG.png); */
   background-repeat: no-repeat;
@@ -156,11 +162,11 @@ footer {
 
 .gridWrapper {
   margin-top: 3.39em;
-  margin-left: 4.6em;
+  margin-left: 4.8em;
 }
 
 .footerWrapper {
-  margin-left: 4.6em;
+  margin-left: 4.8em;
 }
 
 .right {

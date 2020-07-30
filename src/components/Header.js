@@ -45,6 +45,9 @@ class Header extends React.Component {
                     <Navbar expand="lg">
                         <Navbar.Brand href="/"><img height="40" width="118" src="asset/images/logoFull.svg" /></Navbar.Brand>
                         <Col>
+                            <h2 className="text-right reactHead">Assistant</h2>
+                        </Col>
+                        <Col>
                             <Button onClick={this.toggleModal} className="right" variant="light">
                                 <i className="fa fa-sign-in fa-lg" /> Login
                             </Button>

@@ -1,11 +1,11 @@
 import React from 'react';
 import moment from 'moment';
+import { Card, Container, Button, Row, Col } from 'react-bootstrap';
+
 
 class Calendar extends React.Component {
     constructor(props) {
         super(props);
-        // this.width = props.width || "350px";
-        // this.style.width = this.width;
     }
 
 
@@ -120,7 +120,7 @@ class Calendar extends React.Component {
     }
 
     setYear = (year) => {
-        let dateContext = Object.assign({}, this.state.dateContext);
+        const dateContext = Object.assign({}, this.state.dateContext);
         dateContext = moment(dateContext).set("year", year);
         this.setState({
             dateContext: dateContext
@@ -171,7 +171,6 @@ class Calendar extends React.Component {
     }
 
     render() {
-        // Map the weekdays i.e Sun, Mon, Tue etc as <td>
         let weekdays = this.weekdaysShort.map((day) => {
             return (
                 <td key={day} className="week-day">{day}</td>
@@ -188,7 +187,7 @@ class Calendar extends React.Component {
 
         console.log("blanks: ", blanks);
 
-        let daysInMonth = [];
+        const daysInMonth = [];
         for (let d = 1; d <= this.daysInMonth(); d++) {
             let className = (d == this.currentDay() ? "day current-day" : "day");
             let selectedClass = (d == this.state.selectedDay ? " selected-day " : "")
@@ -202,26 +201,26 @@ class Calendar extends React.Component {
 
         console.log("days: ", daysInMonth);
 
-        var totalSlots = [...blanks, ...daysInMonth];
-        let rows = [];
+        const totalSlots = [...blanks, ...daysInMonth];
+        const rows = [];
         let cells = [];
 
         totalSlots.forEach((row, i) => {
             if ((i % 7) !== 0) {
                 cells.push(row);
             } else {
-                let insertRow = cells.slice();
+                const insertRow = cells.slice();
                 rows.push(insertRow);
                 cells = [];
                 cells.push(row);
             }
             if (i === totalSlots.length - 1) {
-                let insertRow = cells.slice();
+                const insertRow = cells.slice();
                 rows.push(insertRow);
             }
         });
 
-        let trElems = rows.map((d, i) => {
+        const trElems = rows.map((d, i) => {
             return (
                 <tr key={i * 100}>
                     {d}
@@ -230,39 +229,48 @@ class Calendar extends React.Component {
         })
 
         return (
-            <div className="container gridWrapper">
-                <div className="col">
-                    
-                </div>
-                <div className="calendar-container right mr-4 col" style={this.style}>
-                    <table className="calendar">
-                        <thead>
-                            <tr className="calendar-header">
-                                <td colSpan="5">
-                                    <this.MonthNav />
-                                    {" "}
-                                    <this.YearNav />
-                                </td>
-                                <td colSpan="2" className="nav-month">
-                                    <i className="prev fa fa-fw fa-chevron-left"
-                                        onClick={(e) => { this.prevMonth() }}>
-                                    </i>
-                                    <i className="prev fa fa-fw fa-chevron-right"
-                                        onClick={(e) => { this.nextMonth() }}>
-                                    </i>
+            <div className="gridWrapper dark">
+                <Row>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <h2 className="mt-3 mb-2 footerHeadText mainHead">- Request a Time -</h2>
+                            </Col>
+                        </Row>
+                    </Container>
+                    <Container>
+                        <Row className="mb-4 ml-3">
+                            <Col className="calendar-container card right mr-4 col">
+                                    <table className="calendar">
+                                        <thead>
+                                            <tr className="calendar-header">
+                                                <td colSpan="5">
+                                                    <this.MonthNav />
+                                                    {" "}
+                                                    <this.YearNav />
+                                                </td>
+                                                <td colSpan="2" className="nav-month">
+                                                    <i className="prev fa fa-fw fa-chevron-left"
+                                                        onClick={(e) => { this.prevMonth() }}>
+                                                    </i>
+                                                    <i className="prev fa fa-fw fa-chevron-right"
+                                                        onClick={(e) => { this.nextMonth() }}>
+                                                    </i>
 
-                                </td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                {weekdays}
-                            </tr>
-                            {trElems}
-                        </tbody>
-                    </table>
-
-                </div>
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                {weekdays}
+                                            </tr>
+                                            {trElems}
+                                        </tbody>
+                                    </table>
+                            </Col>
+                        </Row>
+                    </Container>
+                </Row>
             </div>
 
         );
