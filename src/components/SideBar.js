@@ -8,7 +8,7 @@ const StyledSideNav = styled.div`
   width: 75px;
   z-index: 1;
   top: 3.4em;
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(255, 255, 255);
   overflow-x: hidden;
   padding-top: 10px;
   border-width: medium;

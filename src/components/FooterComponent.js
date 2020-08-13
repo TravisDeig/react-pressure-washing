@@ -10,11 +10,11 @@ function Footer() {
                         <h5 className="mainHead footerHeadText">Quick Links</h5>
                         <ul className="list-unstyled">
                             <li><Nav.Link href="/home" className="text-light">Home</Nav.Link></li>
-                            <li><Nav.Link href="/services" className="text-light">Services</Nav.Link></li>
-                            <li><Nav.Link href="/gallary" className="text-light">Gallery</Nav.Link></li>
+                            <li><Nav.Link href="/calendar" className="text-light">Calendar</Nav.Link></li>
+                            {/* <li><Nav.Link href="/gallary" className="text-light">Gallery</Nav.Link></li>
                             <li><Nav.Link href="/aboutus" className="text-light">About Us</Nav.Link></li>
                             <li><Nav.Link href="/blog" className="text-light">Blog</Nav.Link></li>
-                            <li><Nav.Link href="/contact" className="text-light">Contact</Nav.Link></li>
+                            <li><Nav.Link href="/contact" className="text-light">Contact</Nav.Link></li> */}
                         </ul>
                     </Col>
                     <Col>

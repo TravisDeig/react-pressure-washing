@@ -8,7 +8,7 @@ const StyledHeaderNav = styled.div`
     width: 100%;
     z-index: 1;
     top: 0em;
-    background-color: rgb(250, 250, 250); 
+    background-color: rgb(255, 255, 255); 
     overflow-y: hidden;
     box-shadow: 3px 3px 3px grey;
 `;
