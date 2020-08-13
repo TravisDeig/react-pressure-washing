@@ -63,14 +63,14 @@ class Header extends Component {
                         <Form onSubmit={this.handleLogin}>
                             <Form.Group>
                                 <Form.Label htmlFor="username">Username</Form.Label>
-                                <Form.Control type="text" id="username" name="username" innerRef={input => this.username = input} />
+                                <Form.Control type="text" id="username" name="username" ref={input => this.username = input} />
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label htmlFor="password">Password</Form.Label>
-                                <Form.Control type="password" id="password" name="password" innerRef={input => this.password = input} />
+                                <Form.Control type="password" id="password" name="password" ref={input => this.password = input} />
                             </Form.Group>
                             <Form.Group check>
-                                <Form.Check type="checkbox" name="remember" innerRef={input => this.remember = input} label="Remember me" />
+                                <Form.Check type="checkbox" name="remember" ref={input => this.remember = input} label="Remember me" />
                             </Form.Group>
                             <Button type="submit" value="submit" color="primary">Login</Button>
                         </Form>
