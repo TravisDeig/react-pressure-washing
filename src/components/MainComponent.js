@@ -5,23 +5,24 @@ import Sidebar from './SideBar'
 import Header from './Header';
 import History from './HistoryComponent'
 import Calendar from './CalendarComponent'
-import { SERVICES } from '../shared/services'
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect, withRouter } from "react-router-dom";
+import { connect } from 'react-redux';
+
+const mapStateToProps = state => {
+    return {
+        services: state.services
+    }
+}
 
 class Main extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            services: SERVICES
-        }
-    }
+
     render() {
         return (
             <React.Fragment>
                 <Header />
                 <Sidebar />
                 <Switch>
-                    <Route path='/home' render={() => <Home services={this.state.services} />}/>
+                    <Route path='/home' render={() => <Home services={this.props.services} />}/>
                     <Route exact path='/calendar' component={Calendar} />
                     <Route exact path='/history' component={History} />
                     <Redirect to='/home' />
@@ -32,4 +33,4 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default connect(mapStateToProps)(Main);

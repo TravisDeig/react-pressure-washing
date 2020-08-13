@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import { Card, Container, Button, Row, Col } from 'react-bootstrap';
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-
-    }
 
     render() {
         const home = this.props.services.map(service => {
@@ -25,7 +21,7 @@ class Home extends Component {
         })
 
         return (
-            <div className="dark gridWrapper">
+            <div>
                 <Container>
                     <h2 className="mainHead footerHeadText">- Our Services -</h2>
                     <Row sm="2">
