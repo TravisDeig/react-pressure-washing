@@ -1,5 +1,5 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { Component } from 'react'
+import { BrowserRouter as Route, Link } from "react-router-dom";
 import styled from 'styled-components';
 
 
@@ -22,7 +22,7 @@ a {
 
 
 
-class NavItem extends React.Component {
+class NavItem extends Component {
 
   handleClick = () => {
     const { path, onItemClick } = this.props;

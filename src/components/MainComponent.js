@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import Home from './HomeComponent';
 import Footer from './FooterComponent'
 import Sidebar from './SideBar'
-import { SERVICES } from '../shared/services'
-import { Route, Switch } from "react-router-dom";
 import Header from './Header';
+import History from './HistoryComponent'
 import Calendar from './CalendarComponent'
+import { SERVICES } from '../shared/services'
+import { Route, Switch, Redirect } from "react-router-dom";
 
 class Main extends Component {
     constructor(props) {
@@ -22,6 +23,8 @@ class Main extends Component {
                 <Switch>
                     <Route path='/home' render={() => <Home services={this.state.services} />}/>
                     <Route exact path='/calendar' component={Calendar} />
+                    <Route exact path='/history' component={History} />
+                    <Redirect to='/home' />
                 </Switch>
                 <Footer />
             </React.Fragment>

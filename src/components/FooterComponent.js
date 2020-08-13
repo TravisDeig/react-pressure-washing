@@ -11,8 +11,8 @@ function Footer() {
                         <ul className="list-unstyled">
                             <li><Nav.Link href="/home" className="text-light">Home</Nav.Link></li>
                             <li><Nav.Link href="/calendar" className="text-light">Calendar</Nav.Link></li>
-                            {/* <li><Nav.Link href="/gallary" className="text-light">Gallery</Nav.Link></li>
-                            <li><Nav.Link href="/aboutus" className="text-light">About Us</Nav.Link></li>
+                            <li><Nav.Link href="/history" className="text-light">History</Nav.Link></li>
+                            {/* <li><Nav.Link href="/aboutus" className="text-light">About Us</Nav.Link></li>
                             <li><Nav.Link href="/blog" className="text-light">Blog</Nav.Link></li>
                             <li><Nav.Link href="/contact" className="text-light">Contact</Nav.Link></li> */}
                         </ul>

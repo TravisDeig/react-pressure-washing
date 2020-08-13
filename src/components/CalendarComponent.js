@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import moment from 'moment';
 import { Card, Container, Button, Row, Col, Table } from 'react-bootstrap';
 
 
-class Calendar extends React.Component {
+class Calendar extends Component {
     constructor(props) {
         super(props);
     }

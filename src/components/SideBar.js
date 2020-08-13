@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from "styled-components";
 import NavItem from './NavItemComponent';
 
@@ -17,7 +17,7 @@ const StyledSideNav = styled.div`
 
 
 
-class SideNav extends React.Component {
+class SideNav extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -35,12 +35,12 @@ class SideNav extends React.Component {
                     css: 'fa fa-fw fa-calendar',
                     key: 2
                 },
-                // {
-                //     path: '',
-                //     name: '',
-                //     css: '',
-                //     key: 3
-                // },
+                {
+                    path: '/history',
+                    name: 'History',
+                    css: 'fa fa-fw fa-history',
+                    key: 3
+                },
             ]
         }
     }
@@ -65,10 +65,10 @@ class SideNav extends React.Component {
     }
 }
 
-export default class Sidebar extends React.Component {
+export default class Sidebar extends Component {
     render() {
         return (
-            <SideNav></SideNav>
+            <SideNav />
         );
     }
 }

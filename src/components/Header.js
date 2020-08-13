@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Navbar, Col, Button, Modal, Form } from 'react-bootstrap';
 import styled from 'styled-components';
 
@@ -14,7 +14,7 @@ const StyledHeaderNav = styled.div`
 `;
 
 
-class Header extends React.Component {
+class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
